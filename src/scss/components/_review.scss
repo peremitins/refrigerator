@@ -1,0 +1,221 @@
+.review {
+  min-height: 1149px;
+  background: url($reviewBg) center no-repeat;
+  padding: 100px 0 125px;
+  overflow: hidden;
+
+  &__flag {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-family: $museoSans;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 120%;
+    margin-bottom: 50px;
+    width: 420px;
+    letter-spacing: .3px;
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &__slider {
+    position: relative;
+  }
+  
+  &__slider-item-wrapper {
+    display: flex;
+  }
+
+  &__slider-item {
+    width: 410px;
+    height: 706px!important;
+    box-shadow: 0px 0px 50px rgba(0, 109, 146, 0.2);
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 40px 60px 40px 60px;
+    &.active {
+      height: auto!important;
+    }
+  }
+
+  &__slider-item-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    align-items: center;
+  }
+
+  &__slider-item-header-img {
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    position: relative;
+    top: 7px;
+    margin-bottom: 25px;
+  }
+  
+  &__slider-item-header-right {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  &__slider-item-header-title {
+    font-family: $museoSans;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
+    color: #0D0D0D;
+  }
+
+  &__slider-item-description {
+    margin-bottom: 20px;
+  }
+
+  &__slider-item-description-text {
+    font-family: $openSans;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #4F4F4F;
+    margin-bottom: 20px;
+    height: 105px;
+    overflow: hidden;
+    &.active {
+      height: auto;
+    }
+  }
+
+  &__slider-item-description-link {
+    display: block;
+    margin: 0 auto;
+    font-family: $openSans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    text-decoration-line: underline;
+    color: #BDBDBD;
+    cursor: pointer;
+    transition: opacity .3s ease;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  
+  &__slider-item-footer {
+    text-align: center;
+  }
+
+  &__slider-show-more {
+    display: none;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    font-family: $openSans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    text-decoration-line: underline;
+    color: #99FF17;
+    height: 75px;
+    width: 100%;
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__slider-item-footer-name {
+    font-family: $openSans;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 5px;
+  }
+
+  &__slider-item-footer-age {
+    font-family: $openSans;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #4F4F4F;
+  }
+  
+  &__slider-item-header-rate {
+    span {
+      &::before {
+        font-size: 1.25em;
+        display: inline-block;
+        content: "★";
+        z-index: -1;
+        color: #ffd700;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+//slider
+.swiper-pagination-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  opacity: 1;
+  border: 1px solid $green;
+  margin: 0 7.5px;
+  transition: transform .3s ease;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  background: $green;
+}
+.swiper-container.swiper-container-initialized.swiper-container-horizontal {
+  margin-bottom: 30px;
+}
+
+.swiper-button-next, .swiper-container-rtl.swiper-button-next, .swiper-button-prev {
+  width: 60px!important;
+  height: 60px!important;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: opacity .3s ease;
+  &:hover {
+    opacity: .7;
+  }
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+  color: $green;
+  font-size: 22px!important;
+  font-weight: 900;
+}
+.swiper-button-next {
+  right: -92px !important;
+  top: 48%!important;
+}
+.swiper-button-prev {
+  left: -92px!important;
+  top: 48%!important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  transition: transform .3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.swiper-button-prev:after {
+  position: relative;
+  left: -1px;
+}
+.swiper-button-next:after {
+  position: relative;
+  left: 2px;
+}

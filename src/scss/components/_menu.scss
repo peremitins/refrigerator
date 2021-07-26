@@ -1,0 +1,119 @@
+.menu__btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin-right: 7px;
+  cursor: pointer;
+  &.active {
+    span {
+      display: none;
+    }
+    &::before {
+      left: 0;
+      top: 23px;
+      transform: rotate(45deg);
+    }
+    &::after {
+      bottom: 23px;
+      transform: rotate(135deg);
+    }
+  }
+}
+.menu__btn span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  right: 0;
+  height: 4px;
+  background-color: #232323;
+}
+.menu__btn::before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 20px;
+  right: 0;
+  height: 4px;
+  background-color: #232323;
+  transition: all .3s ease;
+}
+.menu__btn::after {
+  content: '';
+  position: absolute;
+  bottom: 9px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #232323;
+  transition: all .3s ease;
+}
+.menu__list {
+  position: fixed;
+  background: #fff;
+  left: 0;
+  right: 0;
+  top: 85px;
+  height: calc(100vh - 85px);
+  z-index: 999;
+  padding-top: 15px;
+  transform: translateY(-300%);
+  transition: transform 0.5s ease;
+  overflow: auto;
+}
+.menu__list.active {
+  transform: translateY(0);
+}
+.menu__item {
+  width: 100%
+}
+.menu__link {
+  display: block;
+  color: inherit;
+  font-size: 20px;
+  width: 100%;
+  padding: 20px 50px;
+  border-bottom: 1px solid #E0E1E7;
+  position: relative;
+  transition: color 0.3s;
+}
+.menu__sublink {
+  padding-left: 85px;
+}
+.menu__link:first-child {
+  border-top: 1px solid #E0E1E7;
+}
+.menu__link::after {
+  content: '>';
+  position: absolute;
+  right: 25px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.menu__link:hover {
+  color: $green;
+}
+@media (max-width: 575px) {
+  .menu__link {
+  padding: 17px 50px 17px 20px;
+  font-size: 18px;
+  }
+  .menu__sublink {
+    padding-left: 85px;
+  }
+  .menu__sublink:first-child {
+    border-top: none;
+  }
+  .menu__sublink {
+    padding-left: 35px;
+  }
+}
+@media (max-width: 480px) {
+  .menu__list {
+    top: 55px;
+    height: calc(100vh - 55px);
+  }
+}

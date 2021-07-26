@@ -1,0 +1,149 @@
+.why {
+  min-height: 1333px;
+  padding: 99px 0 0px;
+  &__container {
+  }
+
+  &__wrapper {
+    min-height: 1236px;
+    text-align: center;
+  }
+
+  &__flag {
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    &.flag-double-mobile {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-family: $museoSans;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 120%;
+    max-width: 573px;
+    margin: 0 auto;
+    letter-spacing: .3px;
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 1035px;
+  }
+
+  &__center-img-wrapper {
+    width: 624px;
+    height: 405px;
+    position: relative;
+    &::before {
+      content: url(../images/why/why-label.svg);
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__center-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__item-1 {
+    top: 5%;
+    left: 60%;
+  }
+  &__item-2 {
+    top: 24%;
+    left: 81%;
+  }
+  &__item-3 {
+    top: 51%;
+    left: 81%;
+  }
+  &__item-4 {
+    top: 70%;
+    left: 60%;
+  }
+  &__item-5 {
+    top: 70%;
+    left: 24%;
+  }
+  &__item-6 {
+    top: 51%;
+    left: 3%;
+  }
+  &__item-7 {
+    top: 24%;
+    left: 3%;
+  }
+  &__item-8 {
+    top: 5%;
+    left: 24%;
+  }
+  
+  &__item-title {
+    font-family: $openSans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    max-width: 200px;
+    margin-bottom: 9px;
+  }
+  
+  &__item-img-wrapper {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    overflow: hidden;
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__item-img {
+    transition: transform .3s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__left-order-btn-text {
+    display: inline-flex;
+    align-items: center;
+  }
+  &__item-subtitle {
+    display: none;
+  }
+  &__label-mobile.flag-double {
+    display: none;
+    font-family: $openSans;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 100%;
+    align-items: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    span {
+      color: #FFDA35;
+    }
+  }
+}
